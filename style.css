@@ -1,25 +1,91 @@
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   /* background: rgb(254,145,78);
-  background: linear-gradient(0deg, rgba(254,145,78,1) 3%, rgba(0,0,0,1) 500px); */
-  background: rgb(222,127,68);
-background: linear-gradient(0deg, rgba(222,127,68,1) 0%, rgba(243,139,75,1) 3%, rgba(0,0,0,1) 500px);
+    background: linear-gradient(0deg, rgba(254,145,78,1) 3%, rgba(0,0,0,1) 500px); */
+  background: rgb(222, 127, 68);
+  background: linear-gradient(0deg, rgba(222, 127, 68, 1) 0%, rgba(243, 139, 75, 1) 3%, rgba(0, 0, 0, 1) 500px);
   min-height: 100vh;
+  /* padding: 40px 30px; */
+
 }
 
+.nav-list {
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+  text-decoration: none;
 
-.container {
-  padding: 40px 20px;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 1280px;
+  /* height: 40px; */
+  margin-inline: auto;
+
+  gap: 0 30px;
+  flex-wrap: wrap;
+}
+
+.header {
+  background: #fff;
+  /* padding: 16px; */
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #000;
+  padding: 16px;
+  display: inline-block;
+}
+
+li {
+  transition: ease-in-out 0.4s;
+}
+
+li:hover {
+  transform: scale(1.15);
+  text-shadow: 1px 2px 2px #b2b2b2;
+}
+
+.banner-imagem {
+    position: relative;
+
+}
+
+.hero1 {
+  height: 100vh;
+  background: center / cover no-repeat url(/img/Artboard.png);
 }
 
 .hero {
   /* margin-top: 60px; */
+  position: absolute;
   display: flex;
   justify-content: center;
+  top: 42%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+
+}
+
+img {
+  object-fit: cover;
+  width: 60%;
 }
 
 .descricao {
@@ -27,6 +93,7 @@ background: linear-gradient(0deg, rgba(222,127,68,1) 0%, rgba(243,139,75,1) 3%, 
   display: flex;
   justify-content: center;
 }
+
 .descricao p {
   color: white;
   font-size: 25px;
@@ -44,7 +111,7 @@ background: linear-gradient(0deg, rgba(222,127,68,1) 0%, rgba(243,139,75,1) 3%, 
 }
 
 .social img {
-  width: 60px;
+  width: 50px;
 }
 
 .social img:hover {
@@ -56,4 +123,11 @@ background: linear-gradient(0deg, rgba(222,127,68,1) 0%, rgba(243,139,75,1) 3%, 
   margin-top: 40px;
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 890px) {
+  img {
+    width: 90%;
+  }
+
 }
