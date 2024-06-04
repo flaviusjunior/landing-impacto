@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -11,11 +12,15 @@ html {
 body {
   /* background: rgb(254,145,78);
     background: linear-gradient(0deg, rgba(254,145,78,1) 3%, rgba(0,0,0,1) 500px); */
-  background: rgb(222, 127, 68);
-  background: linear-gradient(0deg, rgba(222, 127, 68, 1) 0%, rgba(243, 139, 75, 1) 3%, rgba(0, 0, 0, 1) 500px);
+  /* background: rgb(222, 127, 68); */
+  background: #000;
   min-height: 100vh;
   /* padding: 40px 30px; */
 
+}
+
+#burguer {
+  display: none;
 }
 
 .nav-list {
@@ -58,17 +63,17 @@ li {
 
 li:hover {
   transform: scale(1.15);
-  text-shadow: 1px 2px 2px #b2b2b2;
+  /* text-shadow: 1px 2px 2px #b2b2b2; */
 }
 
 .banner-imagem {
-    position: relative;
+  position: relative;
 
 }
 
 .hero1 {
   height: 100vh;
-  background: center / cover no-repeat url(/img/Artboard.png);
+  background: center / cover no-repeat url(img/Artboard\ 10.png);
 }
 
 .hero {
@@ -78,9 +83,7 @@ li:hover {
   justify-content: center;
   top: 42%;
   left: 50%;
-  
   transform: translate(-50%, -50%);
-
 }
 
 img {
@@ -88,26 +91,125 @@ img {
   width: 60%;
 }
 
+.box {
+  margin: 0 10em 0 10em;
+}
+
 .descricao {
-  margin: 80px 0;
+  /* margin: 80px 0; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.titulos {
+  color: #ff5e00;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 25px;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 2em;
 }
 
 .descricao p {
   color: white;
-  font-size: 25px;
+  font-size: 1em;
   width: 889px;
   text-indent: 40px;
   font-family: Arial, Helvetica, sans-serif;
+  width: auto;
+  line-height: 1.5
+}
+
+.horarios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.horarios-tabela {
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  color: #fff;
+  /* width: 90%; */
+  text-align: center;
+  border: 4px solid #ff5e00;
+  height: 3em;
+  padding: 1em;
+}
+
+.sub-titulo {
+  color: #ff5e00;
+  font-family: Arial, Helvetica, sans-serif;
+  /* padding-bottom: 25px; */
+  width: auto;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.services-box-full {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 2em 0 2em 0;
+}
+
+.services-box {
+  min-height: 200px;
+  width: 400px;
+}
+
+.services-box-full img {
+  height: 300px;
+  border: #ff5e00 4px solid;
+  object-fit: cover;
+  width: 100%;
+}
+
+.services-box-full p {
+  color: #fff;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.localizacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: 40px; */
+  display: flex;
+  justify-content: center;
+}
+
+.localizacao iframe {
+  width: 100%;
+  height: 250px;
 }
 
 .social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 40px;
+}
+
+.social-icons {
   display: flex;
   gap: 40px;
-  justify-content: center;
-  align-items: center;
 }
 
 .social img {
@@ -119,15 +221,95 @@ img {
   transition: ease-in-out 40ms;
 }
 
-.localizacao {
-  margin-top: 40px;
+footer {
+  /* position: absolute; */
+  /* bottom: 0; */
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  color: #000;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 60px;
 }
+
+a {
+  color: #ff5e00;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff5e00;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  width: 5em;
+
+  /* Outros estilos, como cor de fundo, tamanho da fonte, etc. */
+}
+
+#rolar-baixo {
+  position: fixed;
+  bottom: 60px;
+  right: 50%;
+  width: 5em;
+  transform: translateX(50%);
+}
+
 
 @media only screen and (max-width: 890px) {
   img {
     width: 90%;
+  }
+
+  .box {
+    margin: 0 1em 0 1em;
+  }
+
+  .services-box-full {
+    gap: 10px;
+  }
+
+  .services-box-full img {
+    height: 150px;
+  }
+
+  #back-to-top {
+    width: 3em;
+  }
+
+  #rolar-baixo {
+    width: 3em;
+  }
+
+  #burguer {
+    display: block;
+    background-color: #ff5e00;
+    width: 50px;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .nav-list li {
+    width: 100%;
+    transform: unset;
   }
 
 }

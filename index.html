@@ -9,14 +9,15 @@
 </head>
 
 <body>
-  <header class="header">
-    <nav class="nav">
+  <header class="header" id="top">
+    <img id="burguer" onclick="clickMenu()" src="img/menu_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="">
+    <nav id="itens" class="nav">
       <ul class="nav-list">
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Localização</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#localizacao">Localização</a></li>
         <li><a href="#social">Contato</a></li>
-        <li><a href="#">Horários</a></li>
-        <li><a href="#">Serviços</a></li>
+        <li><a href="#horario">Horários</a></li>
+        <li><a href="#servico">Serviços</a></li>
       </ul>
     </nav>
   </header>
@@ -26,31 +27,142 @@
     <img class="hero" src="img/logo.png" alt="">
   </div>
 
-  <div class="descricao">
-    <p>Somos especializados em oferecer soluções rápidas e confiáveis para todos os problemas relacionados aos seus
-      dispositivos móveis. Nossa equipe altamente qualificada e experiente está pronta para ajudar a resolver qualquer
-      questão, desde reparos de hardware até problemas de software. Aqui, valorizamos a qualidade do serviço e a
-      satisfação do cliente, garantindo que seu celular seja tratado com cuidado e atenção.</p>
-  </div>
+  <div id="back-to-top"><a href="#top"><img src="img/Prancheta 2.png" alt=""></a></div>
 
-  <div class="social" id="social">
-    <a href="https://www.instagram.com/impac7o/" target="_blank">
-      <img src="img/instagram.png" alt="instagram impacto">
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=100079836382500" target="_blank">
-      <img src="img/facebook.png" alt="instagram impacto">
-    </a>
-    <a href="https://api.whatsapp.com/send/?phone=5573981871846&text&type=phone_number&app_absent=0" target="_blank">
-      <img src="img/whatsapp.png" alt="instagram impacto">
-    </a>
-  </div>
+  <div id="rolar-baixo"><a href="#sobre"><img src="img/Prancheta 3.png" alt=""></a></div>
 
-  <div class="localizacao">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3845.3814676783477!2d-39.6522!3d-15.4639!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x737ed534d5a941b%3A0xb12f7633a6bb676c!2sR.%20Ivete%20Nogueira%2C%2057%2C%20Pau%20Brasil%20-%20BA%2C%2045890-000!5e0!3m2!1spt-BR!2sbr!4v1716082333082!5m2!1spt-BR!2sbr"
-      width="680" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+  <section class="box">
+
+    <div class="descricao" id="sobre">
+      <h1 class="titulos">Quem somos?</h1>
+      <p>Somos uma equipe apaixonada e dedicada, comprometida em oferecer soluções rápidas e confiáveis para todos os
+        problemas relacionados aos seus dispositivos móveis. Nossa experiência abrange desde reparos de hardware até
+        questões de software, e estamos sempre prontos para ajudar. Valorizamos a qualidade do serviço e a satisfação do
+        cliente, garantindo que seu celular seja tratado com cuidado e atenção.</p>
+    </div>
+
+    <section class="horarios" id="horario">
+      <h1 class="titulos">Horários de funcionamento</h1>
+      <table class="horarios-tabela">
+        <tr>
+          <th>Domingo</th>
+          <th>Seg a Sex</th>
+          <th>Sábado</th>
+        </tr>
+        <tr>
+          <td>Das 10h às 12h</td>
+          <td>Das 8 às 18h</td>
+          <td>Não funcionamos aos Sábados <a target="_blank" href="https://www.bible.com/pt/bible/compare/EXO.20.8-10">Ex 20:8-10</a>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="servico">
+      <h1 class="titulos">Serviços</h1>
+
+      <div>
+        <h2 class="sub-titulo">Reparo Rápido e Eficiente</h2>
+        <div class="services-box-full">
+          <div class="services-box">
+            <img src="https://www.rwcell.com.br/assistencia-tecnica/imagens/troca-de-tela-iphone-11-precos.png" alt="">
+            <p>Troca de Tela</p>
+          </div>
+
+          <div class="services-box">
+            <img src="https://www.softblindagem.com.br/cdn/shop/articles/iPhone-carregando-bateria.jpg?v=1682356436" alt="">
+            <p>Bateria e Carregamento</p>
+          </div>
+
+          <div class="services-box">
+            <img
+              src="https://proinforj.com.br/wp-content/uploads/2024/05/113-manutencao-de-celulares-smartphones-e-tablets-capa.jpeg"
+              alt="">
+            <p>Conserto de Botões e Conectores</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="sub-titulo">Vendas de Acessórios e Peças</h2>
+        <div class="services-box-full">
+          <div class="services-box">
+            <img src="https://images-americanas.b2w.io/produtos/7304743621/imagens/capa-capinha-pelicula-vidro-3d-para-iphone-14-6-1/7304743680_1_large.jpg" alt="">
+            <p>Capinhas e Películas</p>
+          </div>
+
+          <div class="services-box">
+            <img src="https://redegigantao.com.br/wp-content/uploads/2019/01/v8-2-1.jpeg" alt="">
+            <p>Carregadores e Cabos</p>
+          </div>
+
+          <div class="services-box">
+            <img
+              src="https://img.olx.com.br/images/44/447478030831125.jpg"
+              alt="">
+            <p>Peças Originais</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="sub-titulo">Consultoria Personalizada</h2>
+        <div class="services-box-full">
+          <div class="services-box">
+            <img src="https://img.ltn.com.tw/Upload/3c/page/2019/09/23/190923-38074-1.jpeg" alt="">
+            <p>Atualização de Software</p>
+          </div>
+
+          <div class="services-box">
+            <img src="https://www.estadao.com.br/recomenda/wp-content/uploads/2024/03/compare__b5xf30djrsia_og.png.webp" alt="">
+            <p>Escolha do Melhor Modelo</p>
+          </div>
+
+          <div class="services-box">
+            <img
+              src="https://marcusmarques.com.br/wp-content/uploads/2023/02/consultor-vendas.jpg"
+              alt="">
+            <p>Consultoria Personalizada</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="localizacao" id="localizacao">
+      <h1 class="titulos">Localização</h1>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3845.3814676783477!2d-39.6522!3d-15.4639!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x737ed534d5a941b%3A0xb12f7633a6bb676c!2sR.%20Ivete%20Nogueira%2C%2057%2C%20Pau%20Brasil%20-%20BA%2C%2045890-000!5e0!3m2!1spt-BR!2sbr!4v1716082333082!5m2!1spt-BR!2sbr"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </section>
+
+    <section class="social" id="social">
+      <h1 class="titulos">Contatos</h1>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/impac7o/" target="_blank">
+          <img src="img/instagram.png" alt="instagram impacto">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100079836382500" target="_blank">
+          <img src="img/facebook.png" alt="instagram impacto">
+        </a>
+        <a href="https://api.whatsapp.com/send/?phone=5573981871846&text&type=phone_number&app_absent=0"
+          target="_blank">
+          <img src="img/whatsapp.png" alt="instagram impacto">
+        </a>
+        <a href="https://mediafiles.botpress.cloud/519a3dbd-108d-41f7-8723-0677cc7602d8/webchat/bot.html"
+          target="_blank">
+          <img src="img/Prancheta 1.png" alt="instagram impacto">
+        </a>
+      </div>
+    </section>
+  </section>
+
+  <footer>
+    <p>© 2024 Impac7o - Todos os direitos reservados.</p>
+    <p>Developed by <a href="https://www.linkedin.com/in/fl%C3%A1vio-j%C3%BAnior-santana-0315a5268/" target="_blank">Flávio Júnior</a>👍</p>
+  </footer>
 </body>
+<script src="script.js"></script>
 
 </html>
